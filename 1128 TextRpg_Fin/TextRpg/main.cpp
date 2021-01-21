@@ -16,7 +16,7 @@ const int	g_iLevelUpExp[LEVEL_MAX] = { 4000, 10000, 20000, 35000, 50000, 70000, 
 
 enum MAIN_MENU
 {
-	MM_NONE,
+	
 	MM_MAP,
 	MM_STORE,
 	MM_INVENTORY,
