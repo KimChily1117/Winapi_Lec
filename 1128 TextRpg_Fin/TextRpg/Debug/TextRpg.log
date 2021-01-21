@@ -1,0 +1,4 @@
+﻿  main.cpp
+C:\Users\Chily\Desktop\1125TextRpg (2)\TextRpg\main.cpp(408,14): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\Chily\Desktop\1125TextRpg (2)\TextRpg\main.cpp(409,15): warning C4244: '초기화 중': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  TextRpg.vcxproj -> C:\Users\Chily\Desktop\1125TextRpg (2)\Debug\TextRpg.exe
