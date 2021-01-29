@@ -25,9 +25,9 @@ public class PlayerAnimator : MonoBehaviour
 	{
 		animator.SetTrigger("OnWeaponAttack");
 	}
+
 	public void OnAttackCollision()
-	{
-		
+	{		
 		attackCollision.SetActive(true);
 	}
 }

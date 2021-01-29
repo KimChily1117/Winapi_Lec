@@ -3,7 +3,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-	[SerializeField]
+    enum WEAPONTYPE
+    {
+        WP_NONE,
+        WP_Dagger,
+        WP_Greatsword
+    }
+
+    Hashtable WEAPON_TYPE = new Hashtable();
+
+    [SerializeField]
 	private KeyCode jumpKeyCode = KeyCode.Space;
 	[SerializeField]
 	private Transform cameraTransform;
@@ -16,20 +25,23 @@ public class PlayerController : MonoBehaviour
 
 	public float m_Maxhp;
 	public float m_Curhp;
-
 	public bool isDamage;
 
+    WEAPONTYPE m_eWeaponType;
+   
 
-	private void Awake()
+    private void Awake()
 	{
 		Cursor.visible = false;                 // 마우스 커서를 보이지 않게
 		Cursor.lockState = CursorLockMode.Locked;   // 마우스 커서 위치 고정
+		InitHp();
+
+       
 
 		Player_Dynamic = GetComponent<Player_Dynamic>();
 		playerAnimator = GetComponentInChildren<PlayerAnimator>();
 		meshRenderer = GetComponentsInChildren<MeshRenderer>();
 		mesh = GetComponentInChildren<MeshRenderer>();
-		InitHp();
 		originColor = mesh.material.color; 
 	}
 
@@ -82,6 +94,14 @@ public class PlayerController : MonoBehaviour
 		//meshRenderer.material.color = originColor;
 	}
 
+    public void Swap_Weapon()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+           
+        } 
+    }
+
 
 
 	private void Update()
@@ -89,7 +109,6 @@ public class PlayerController : MonoBehaviour
 		// 방향키를 눌러 이동
 		float x = Input.GetAxis("Horizontal");
 		float z = Input.GetAxis("Vertical");
-
 		// 애니메이션 파라미터 설정 (horizontal, vertical)
 		playerAnimator.OnMovement(x, z);
 		// 이동 속도 설정 (앞으로 이동할때만 5, 나머지는 2)
@@ -106,19 +125,21 @@ public class PlayerController : MonoBehaviour
 			playerAnimator.OnJump();    // 애니메이션 파라미터 설정 (onJump)
 			Player_Dynamic.JumpTo();        // 점프 함수 호출
 		}
-
 		// 마우스 왼쪽 클릭시 칼 연계공격 
 		if (Input.GetMouseButtonDown(0))
 		{
 			playerAnimator.OnWeaponAttack();
-		}	
-	}
+		}
+
+        Swap_Weapon();
+
+
+    }
 
 
 	IEnumerator OnDamage()
 	{
 		isDamage = true;
-
 		
 		yield return new WaitForSeconds(2.3f);
 

@@ -552,3 +552,7 @@ C:\Users\Chily\Desktop\3rd(2) pc\obj\Debug\Assembly-CSharp.csproj.CoreCompileInp
 C:\Users\Chily\Desktop\3rd(2) pc\obj\Debug\Assembly-CSharp.csproj.CopyComplete
 C:\Users\Chily\Desktop\3rd(2) pc\obj\Debug\Assembly-CSharp.dll
 C:\Users\Chily\Desktop\3rd(2) pc\obj\Debug\Assembly-CSharp.pdb
+D:\GIt\Winapi_Lec\3rd(2) pc\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+D:\GIt\Winapi_Lec\3rd(2) pc\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache
+D:\GIt\Winapi_Lec\3rd(2) pc\obj\Debug\Assembly-CSharp.dll
+D:\GIt\Winapi_Lec\3rd(2) pc\obj\Debug\Assembly-CSharp.pdb
